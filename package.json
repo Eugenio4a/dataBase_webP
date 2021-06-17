@@ -1,0 +1,12 @@
+{
+    "name": "authorization-webpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/authorization.js",
+    "devDependencies": {
+        "html-webpack-plugin": "^5.3.1",
+        "webpack": "^5.39.1",
+        "webpack-cli": "^4.7.2",
+        "webpack-dev-server": "^3.11.2"
+    }
+}
