@@ -63,16 +63,25 @@ function signOut() {
     auth.signOut()
 
 }
-let signOutBtn = document.querySelector('#signOutBtn');
-signOutBtn.addEventListener('click', () => {
-    signOut()
-})
+// let signOutBtn = document.querySelector('#signOutBtn');
+// signOutBtn.addEventListener('click', () => {
+//     signOut()
+// })
 
 auth.onAuthStateChanged((user) => {
     if (user) {
         const email = user.email
         M.toast({ html: 'Active user!, ' + email })
+        let logInButton = document.querySelector('#logInButton');
+        logInButton.innerHTML = `Log out`
+        logInButton.classList.remove('modal-trigger')
+        logInButton.addEventListener('click', () => {
+            signOut()
+        })
+
     } else {
         M.toast({ html: 'No Active user ' })
+        logInButton.innerHTML = `Log in`
+        logInButton.classList.add('modal-trigger')
     }
 })
