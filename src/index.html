@@ -18,7 +18,7 @@
     <!-- Modal Registration -->
     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a>
     <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Log In</a>
-    <button id="signOut" onclick="signOut()">Sign Out</button>
+    <button id="signOutBtn">Sign Out</button>
 
     <!-- Modal Registration Content -->
     <div id="modal1" class="modal signUpForm">
@@ -32,7 +32,7 @@
                     <label for="passwordSignUp">Password</label>
                     <input type="password" id="passwordSignUp">
                 </div>
-                <button type="submit" onclick="signUp()">Registration</button>
+                <button id="signUpBtn" type="submit">Registration</button>
             </form>
         </div>
     </div>
@@ -50,7 +50,7 @@
                     <label for="passwordSignIn">Password</label>
                     <input type="password" id="passwordSignIn">
                 </div>
-                <button type="submit">Log In</button>
+                <button id='signInBtn' type="submit">Log In</button>
             </form>
         </div>
     </div>

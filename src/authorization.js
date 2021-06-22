@@ -50,15 +50,23 @@ function signIn() {
     promise.catch(error => M.toast({ html: error }))
 
 }
-let signInBtn = document.querySelector('#passwordSignIn');
+let signUpBtn = document.querySelector('#signUpBtn');
+signUpBtn.addEventListener('click', () => {
+    signUp()
+})
+let signInBtn = document.querySelector('#signInBtn');
 signInBtn.addEventListener('click', () => {
     signIn()
 })
 
 function signOut() {
-    auth.signOut();
+    auth.signOut()
 
 }
+let signOutBtn = document.querySelector('#signOutBtn');
+signOutBtn.addEventListener('click', () => {
+    signOut()
+})
 
 auth.onAuthStateChanged((user) => {
     if (user) {
