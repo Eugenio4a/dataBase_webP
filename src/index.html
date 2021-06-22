@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Modal Registration -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Log In</a>
+    <button id="signOut" onclick="signOut()">Sign Out</button>
+
+    <!-- Modal Registration Content -->
+    <div id="modal1" class="modal signUpForm">
+        <div class="modal-content">
+            <form id="signUpForm" action="">
+                <div class="input">
+                    <label for="emailSignUp">Email</label>
+                    <input type="email" id="emailSignUp">
+                </div>
+                <div class="input">
+                    <label for="passwordSignUp">Password</label>
+                    <input type="password" id="passwordSignUp">
+                </div>
+                <button type="submit" onclick="signUp()">Registration</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal Authorization Content -->
+    <div id="modal2" class="modal signInForm">
+        <div class="modal-content">
+            <form id="signInForm" action="">
+                <div class="input">
+                    <label for="emailSignIn">Email</label>
+                    <input type="email" id="emailSignIn">
+                </div>
+                <div class="input">
+                    <label for="passwordSignIn">Password</label>
+                    <input type="password" id="passwordSignIn">
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
